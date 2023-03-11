@@ -3,6 +3,7 @@ import dayjs from "dayjs";
 import { Time } from "../models/poll";
 
 require("dayjs/locale/da");
+
 dayjs.locale("da");
 
 

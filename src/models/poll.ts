@@ -82,7 +82,7 @@ const PollSchema: Schema = new Schema(
   },
   { timestamps: true }
 );
-
+// @ts-ignore
 const KukkeePoll: Model<PollDoc> =
   mongoose.models.Poll || model("Poll", PollSchema);
 

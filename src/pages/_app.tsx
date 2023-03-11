@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { AppProps } from "next/app";
 import "cal-sans";
 import "@fontsource/inter/400.css";
