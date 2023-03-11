@@ -216,7 +216,7 @@ const RecentPolls = (): JSX.Element => {
   return (
     <>
       <Head>
-        <title>Kukkee — Recent polls</title>
+        <title>Plan — Recent polls</title>
         <link rel="shortcut icon" href="/favicon.svg" />
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -224,22 +224,22 @@ const RecentPolls = (): JSX.Element => {
           name="google-site-verification"
           content="4g7sVHEgHkqmu_q066ocloQj3YI8pOz7IHC8ibisQHk"
         />
-        <meta name="title" content="Kukkee — Meeting poll tool" />
+        <meta name="title" content="PLan — Meeting poll tool" />
         <meta
           name="description"
           content="Free and open source meeting poll tool"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://kukkee.com" />
-        <meta property="og:title" content="Kukkee — Meeting poll tool" />
+        <meta property="og:url" content="https://plan.simonmaribo.dk" />
+        <meta property="og:title" content="Plan — Meeting poll tool" />
         <meta
           property="og:description"
           content="Free and open source meeting poll tool"
         />
         <meta property="og:image" content="/banner.png" />
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://kukkee.com" />
-        <meta property="twitter:title" content="Kukkee — Meeting poll tool" />
+        <meta property="twitter:url" content="https://plan.simonmaribo.dk" />
+        <meta property="twitter:title" content="Plan — Meeting poll tool" />
         <meta
           property="twitter:description"
           content="Free and open source meeting poll tool"

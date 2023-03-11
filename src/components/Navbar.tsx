@@ -17,7 +17,7 @@ const NavBar = (): JSX.Element => {
       <Container className="global-container">
         <Navbar.Brand href="/">
           <img alt="logo" src="/favicon.svg" className="navbar-logo" />
-          <span className="navbar-logo-text">kukkee</span>
+          <span className="navbar-logo-text">Plan</span>
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="basic-navbar-nav"
@@ -31,7 +31,7 @@ const NavBar = (): JSX.Element => {
                   router.pathname === "/" ? ` active` : ``
                 }`}
               >
-                <PlusCircle className="navbar-link-icon" /> New poll
+                <PlusCircle className="navbar-link-icon" /> Ny begivenhed
               </a>
             </Link>
             <Link href="/recent-polls">
@@ -40,30 +40,7 @@ const NavBar = (): JSX.Element => {
                   router.pathname === "/recent-polls" ? ` active` : ``
                 }`}
               >
-                <Grid className="navbar-link-icon" /> Recent polls
-              </a>
-            </Link>
-            <Link href="/how-to">
-              <a
-                className={`navbar-link ${
-                  router.pathname === "/how-to" ? ` active` : ``
-                }`}
-              >
-                <QuestionCircle className="navbar-link-icon" /> How-to
-              </a>
-            </Link>
-            <Link href="https://github.com/AnandBaburajan/Kukkee">
-              <a className="navbar-link">
-                <Github className="navbar-link-icon" /> GitHub
-              </a>
-            </Link>
-            <Link href="/privacy">
-              <a
-                className={`navbar-link ${
-                  router.pathname === "/privacy" ? ` active` : ``
-                }`}
-              >
-                <Lock className="navbar-link-icon" /> Privacy
+                <Grid className="navbar-link-icon" /> Seneste begivenheder
               </a>
             </Link>
           </Nav>
