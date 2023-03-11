@@ -5,9 +5,9 @@ import Router from "next/router";
 import { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
-import { decrypt } from "../src/helpers";
-import Layout from "../src/components/Layout";
-import DeletePoll from "../src/components/poll/DeletePoll";
+import { decrypt } from "../helpers";
+import Layout from "../components/Layout";
+import DeletePoll from "../components/poll/DeletePoll";
 
 const RemoveVotedPollModal = (props: {
   show;

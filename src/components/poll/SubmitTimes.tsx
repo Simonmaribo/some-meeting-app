@@ -22,7 +22,7 @@ const SubmitTimes = (props: {
     e.preventDefault();
 
     if (!newVote.name) {
-      toast.error("Please enter your name", toastOptions);
+      toast.error("Indtast venligst dit navn", toastOptions);
       return;
     }
 
@@ -31,7 +31,7 @@ const SubmitTimes = (props: {
       isUserPresentInVotes(newVote.name, pollFromDB.votes)
     ) {
       toast.error(
-        "An invitee with the same name has voted before - please choose a different name",
+        "En person med dette navn har allerede stemt - vælg venligst et andet!",
         toastOptions
       );
 
@@ -39,7 +39,7 @@ const SubmitTimes = (props: {
     }
 
     if (newVote.times.length === 0) {
-      toast.error("Please select at least one time slot", toastOptions);
+      toast.error("Vælg mindst 1 tid", toastOptions);
 
       return;
     }
@@ -109,7 +109,7 @@ const SubmitTimes = (props: {
         onClick={handleSubmit}
       >
         {!disabled ? (
-          `Mark your availability`
+          `Gem`
         ) : (
           <>
             <Spinner

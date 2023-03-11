@@ -5,13 +5,15 @@ import { GetServerSideProps } from "next";
 import { Form } from "react-bootstrap";
 import dayjs from "dayjs";
 import localizedFormat from "dayjs/plugin/localizedFormat";
-import { getPoll } from "../../src/utils/api/server";
-import VoterPollInfo from "../../src/components/poll/VoterPollInfo";
-import PollTableVoter from "../../src/components/poll/PollTableVoter";
-import SubmitTimes from "../../src/components/poll/SubmitTimes";
-import { TimeFromDB, Vote, PollFromDB } from "../../src/models/poll";
-import { decrypt } from "../../src/helpers";
+import { getPoll } from "../../utils/api/server";
+import VoterPollInfo from "../../components/poll/VoterPollInfo";
+import PollTableVoter from "../../components/poll/PollTableVoter";
+import SubmitTimes from "../../components/poll/SubmitTimes";
+import { TimeFromDB, Vote, PollFromDB } from "../../models/poll";
+import { decrypt } from "../../helpers";
 
+require("dayjs/locale/da");
+dayjs.locale("da");
 dayjs.extend(localizedFormat);
 
 const Poll = (props: {
@@ -70,11 +72,8 @@ const Poll = (props: {
             <>
               <div className="voter-page-final-container">
                 <span className="voter-page-vote-recorded">
-                  Your vote has been successfully recorded.
+                  Dine fortrukne tider er blevet registreret.
                 </span>
-              </div>
-              <div className="voter-page-powered-container">
-                <a href="http://kukkee.com">Powered by Kukkee.com</a>
               </div>
             </>
           );
@@ -95,7 +94,7 @@ const Poll = (props: {
                   className="voter-page-poll-mark-time-name"
                   type="text"
                   maxLength={30}
-                  placeholder="Your name"
+                  placeholder="Dit navn"
                   onChange={handleNameChange}
                   autoFocus
                 />
@@ -104,10 +103,6 @@ const Poll = (props: {
                   pollID={pollID}
                   pollFromDB={pollFromDB}
                 />
-              </div>
-
-              <div className="voter-page-powered-container">
-                <a href="http://kukkee.com">Powered by Kukkee.com</a>
               </div>
             </>
           );
@@ -129,7 +124,7 @@ const Poll = (props: {
               className="voter-page-poll-mark-time-name"
               type="text"
               maxLength={30}
-              placeholder="Your name"
+              placeholder="Dit navn"
               onChange={handleNameChange}
               autoFocus
             />
@@ -139,9 +134,6 @@ const Poll = (props: {
               pollFromDB={pollFromDB}
             />
           </div>
-          <div className="voter-page-powered-container">
-            <a href="http://kukkee.com">Powered by Kukkee.com</a>
-          </div>
         </>
       );
     }
@@ -150,7 +142,7 @@ const Poll = (props: {
   return (
     <>
       <Head>
-        <title>Kukkee — Mark your availability</title>
+        <title>Markér din tilgængelighed</title>
         <link rel="shortcut icon" href="/favicon.svg" />
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />

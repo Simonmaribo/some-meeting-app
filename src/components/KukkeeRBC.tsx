@@ -2,6 +2,10 @@ import { Calendar, Views, dayjsLocalizer } from "react-big-calendar";
 import dayjs from "dayjs";
 import { Time } from "../models/poll";
 
+require("dayjs/locale/da");
+dayjs.locale("da");
+
+
 const localizer = dayjsLocalizer(dayjs);
 
 const KukkeeRBC = (props: { pollTimes; setTimes }): JSX.Element => {

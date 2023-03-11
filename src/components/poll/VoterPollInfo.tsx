@@ -5,6 +5,8 @@ import localizedFormat from "dayjs/plugin/localizedFormat";
 import timezone from "dayjs/plugin/timezone";
 import { PollFromDB } from "../../models/poll";
 
+require("dayjs/locale/da");
+dayjs.locale("da");
 dayjs.extend(localizedFormat);
 dayjs.extend(timezone);
 
@@ -24,13 +26,13 @@ const PollInfo = (props: {
             : "voter-page-poll-badge-closed"
         }
       >
-        {poll.open ? "Open" : "Closed"}
+        {poll.open ? "Åben" : "Afsluttet"}
       </Badge>
       {poll.title && (
         <span className="voter-page-poll-info-title">{poll.title}</span>
       )}
       {!poll.title && (
-        <span className="voter-page-poll-info-title">Untitled</span>
+        <span className="voter-page-poll-info-title">Ingen titel</span>
       )}
       {poll.description && (
         <span className="voter-page-poll-info-desc">{poll.description}</span>
@@ -41,10 +43,6 @@ const PollInfo = (props: {
           {poll.location}
         </span>
       )}
-      <span className="voter-page-poll-info-detail-title">
-        <Globe className="voter-page-poll-info-icon" />
-        Times are shown in: {dayjs.tz.guess()} timezone
-      </span>
       {showFinalTime && (
         <span className="voter-page-poll-info-detail-title">
           <CalendarCheck className="voter-page-poll-info-icon" />

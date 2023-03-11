@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import KukkeePoll, { Vote, PollDoc } from "../../../src/models/poll";
-import { isTimePresentInPollTimes } from "../../../src/helpers";
-import connectToDatabase from "../../../src/utils/db";
+import KukkeePoll, { Vote, PollDoc } from "../../../models/poll";
+import { isTimePresentInPollTimes } from "../../../helpers";
+import connectToDatabase from "../../../utils/db";
 
 export default async (
   req: NextApiRequest,

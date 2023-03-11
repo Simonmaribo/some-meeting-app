@@ -40,10 +40,6 @@ const PollInfo = (props: {
           {poll.location}
         </span>
       )}
-      <span className="poll-info-detail-title">
-        <Globe className="poll-info-icon" />
-        Times are shown in: {dayjs.tz.guess()} timezone
-      </span>
       {!poll.open && showFinalTime && (
         <span className="poll-info-detail-title">
           <CalendarCheck className="poll-info-icon" />

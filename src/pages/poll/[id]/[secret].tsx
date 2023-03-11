@@ -4,14 +4,14 @@ import { GetServerSideProps } from "next";
 import { Container, Jumbotron } from "react-bootstrap";
 import dayjs from "dayjs";
 import localizedFormat from "dayjs/plugin/localizedFormat";
-import { getPoll } from "../../../src/utils/api/server";
-import Layout from "../../../src/components/Layout";
-import PollInfo from "../../../src/components/poll/PollInfo";
-import PollTableAdmin from "../../../src/components/poll/PollTableAdmin";
-import SubmitFinalTime from "../../../src/components/poll/SubmitFinalTime";
-import DeletePoll from "../../../src/components/poll/DeletePoll";
-import { Time, TimeFromDB, PollFromDB } from "../../../src/models/poll";
-import { decrypt } from "../../../src/helpers";
+import { getPoll } from "../../../utils/api/server";
+import Layout from "../../../components/Layout";
+import PollInfo from "../../../components/poll/PollInfo";
+import PollTableAdmin from "../../../components/poll/PollTableAdmin";
+import SubmitFinalTime from "../../../components/poll/SubmitFinalTime";
+import DeletePoll from "../../../components/poll/DeletePoll";
+import { Time, TimeFromDB, PollFromDB } from "../../../models/poll";
+import { decrypt } from "../../../helpers";
 
 dayjs.extend(localizedFormat);
 

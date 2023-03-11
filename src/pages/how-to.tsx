@@ -3,7 +3,7 @@ import { CheckCircleFill, CircleFill } from "react-bootstrap-icons";
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-import Layout from "../src/components/Layout";
+import Layout from "../components/Layout";
 
 const HowTo = (): JSX.Element => {
   return (

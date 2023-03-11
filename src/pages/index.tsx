@@ -12,12 +12,12 @@ import {
 import { nanoid } from "nanoid";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
-import toastOptions from "../src/helpers/toastOptions";
-import Layout from "../src/components/Layout";
-import { encrypt } from "../src/helpers";
-import { Time, Poll } from "../src/models/poll";
-import KukkeeRBC from "../src/components/KukkeeRBC";
-import { createPoll } from "../src/utils/api/server";
+import toastOptions from "../helpers/toastOptions";
+import Layout from "../components/Layout";
+import { encrypt } from "../helpers";
+import { Time, Poll } from "../models/poll";
+import KukkeeRBC from "../components/KukkeeRBC";
+import { createPoll } from "../utils/api/server";
 
 const Home = (): JSX.Element => {
   const [pollDetails, setPollDetails] = useState<{
